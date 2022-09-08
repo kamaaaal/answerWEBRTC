@@ -18,7 +18,7 @@ async function main () {
         }
     });
 
-    const localStream = await navigator.mediaDevices.getUserMedia({vide: true, audio: true});
+    const localStream = await getUserMedia({vide: true, audio: true});
     // const peerConnection = new RTCPeerConnection(iceConfig);
     localStream.getTracks().forEach(track => {
         pc.addTrack(track, localStream);
